@@ -1,4 +1,5 @@
 import { IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 export function Navegation({setAtivo,ativo}) {
     return (
@@ -8,11 +9,12 @@ export function Navegation({setAtivo,ativo}) {
                     Navigation <IoMdClose onClick={()=>{setAtivo(!ativo)}} className=" w-10 scale-150">.</IoMdClose>
                 </div>
                 <div className="w-10/12 flex flex-col text-neutral-200 dark:text-neutral-900">
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Home</a>
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Sobre</a>
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Projects</a>
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Skills</a>
-                    <a className=" mt-4 pb-1 " href="">Contato</a>
+                    <Link to={'/'} className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border">Home</Link>
+                    <Link to={'/sobre'} className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border">Sobre</Link>
+                    <Link to={'/projetos'} className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border">Projects</Link>
+                    <Link to={'/Skills'} className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border">Skills</Link>
+                    <Link to={'/contato'} className=" mt-4 pb-1 " href="">Contato</Link>
+                    
                 </div>
             </div>
         </div>

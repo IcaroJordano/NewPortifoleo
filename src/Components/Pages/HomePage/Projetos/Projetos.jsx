@@ -14,11 +14,10 @@ export function Projetos() {
                         <CardProduto imagem={'https://i.imgur.com/cSytoSD.jpeg,https://i.imgur.com/WwKucXb.jpeg,https://i.imgur.com/cE2Dxh9.jpeg'}></CardProduto>
                     </SwiperSlide>
                 ))}
-            </DivProjetos>
-            <DivProjetos titulo={'Estudos'}>
+            </DivProjetos>            <DivProjetos titulo={'Frelancer'}>
                 {lista.map(() => (
-                    <SwiperSlide className="mr-10">
-                        <CardProduto imagem={'https://icarojordano.github.io/1-Marketing-website/assets/fonebranco-DcaGvqC0.png'}></CardProduto>
+                    <SwiperSlide className=" lg:mr-0" >
+                        <CardProduto imagem={'https://i.imgur.com/cSytoSD.jpeg,https://i.imgur.com/WwKucXb.jpeg,https://i.imgur.com/cE2Dxh9.jpeg'}></CardProduto>
                     </SwiperSlide>
                 ))}
             </DivProjetos>
