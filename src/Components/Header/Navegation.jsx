@@ -8,11 +8,11 @@ export function Navegation({setAtivo,ativo}) {
                     Navigation <IoMdClose onClick={()=>{setAtivo(!ativo)}} className=" w-10 scale-150">.</IoMdClose>
                 </div>
                 <div className="w-10/12 flex flex-col text-neutral-200 dark:text-neutral-900">
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">About</a>
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Articles</a>
+                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Home</a>
+                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Sobre</a>
                     <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Projects</a>
-                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Speaking</a>
-                    <a className=" mt-4 pb-1 " href="">Uses</a>
+                    <a className="border-b-white/10 dark:border-b-neutral-300/50 mt-4 pb-1 border-transparent border" href="">Skills</a>
+                    <a className=" mt-4 pb-1 " href="">Contato</a>
                 </div>
             </div>
         </div>
