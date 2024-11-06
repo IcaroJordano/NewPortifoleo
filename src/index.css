@@ -37,7 +37,7 @@ div .swiper-button-prev {
       height: 3vw;
       color:black;
       position: absolute;
-      top: 40%;
+      top: 30%;
     }
   
     .swiper-button-next::after,
