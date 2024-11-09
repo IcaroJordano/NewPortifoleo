@@ -8,7 +8,7 @@ export function CardAllProjetos({ imagem, titulo, github, deploy }) {
         <div className="w-80 lg:w-96 h-56 lg:h-64 mb-10 lg:ml-6 ">
             <div className="h-5/6 rounded-t-md justify-center flex relative  overflow-hidden">
                 <a className="justify-center w-full flex" href={deploy} target="_blank" >
-                    <img className="w-full  object-cover opacity-80" src={imagem} alt="" />
+                    <img className="w-full  object-cover opacity-80 dark:opacity-100" src={imagem} alt="" />
                 </a>
                 <h3 className="absolute text-xl text-white top-32 lg:top-40 left-5">{titulo}</h3>
             </div>
