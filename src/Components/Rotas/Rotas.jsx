@@ -8,11 +8,11 @@ import { ContatoPage } from "../Pages/ContatoPage/ContatoPage"
 export function Rotas() {
     return (
         <Routes>
-            <Route path="/" element={<HomePage></HomePage>}></Route>
-            <Route path="/sobre" element={<SobrePage></SobrePage>}></Route>
-            <Route path="/projetos" element={<ProjetosPage></ProjetosPage>}></Route>
-            <Route path="/skills" element={<SkillsPage></SkillsPage>}></Route>
-            <Route path="/contato" element={<ContatoPage></ContatoPage>}></Route>
+            <Route path="/NewPortifoleo" element={<HomePage></HomePage>}></Route>
+            <Route path="/NewPortifoleo/sobre" element={<SobrePage></SobrePage>}></Route>
+            <Route path="/NewPortifoleo/projetos" element={<ProjetosPage></ProjetosPage>}></Route>
+            <Route path="/NewPortifoleo/skills" element={<SkillsPage></SkillsPage>}></Route>
+            <Route path="/NewPortifoleo/contato" element={<ContatoPage></ContatoPage>}></Route>
         </Routes>
     )
 }
