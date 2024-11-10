@@ -39,7 +39,7 @@ export function ProjetosPage() {
           });
     },[])
     return (
-        <div className={`flex justify-center pt-28 ${projetos.length>3?"h-auto":'h-screen'}`}>
+        <div className={`flex justify-center pt-28 ${projetos.length>=3?"h-auto":'h-screen'}`}>
             <div className=" flex mx-auto justify-around lg:justify-normal flex-wrap ">
                 {projetos.map((item)=>(
                     <CardAllProjetos deploy={item.linkDeploy} imagem={item.linkImage} titulo={item.titulo}></CardAllProjetos>
