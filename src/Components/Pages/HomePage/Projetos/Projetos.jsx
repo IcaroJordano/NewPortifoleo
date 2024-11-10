@@ -9,9 +9,9 @@ export function Projetos() {
     return (
         <section className="w-full ">
             <h2 className="p-4 lg:pl-20 pt-16 text-white dark:text-neutral-800 text-4xl font-bold" >Backup Projetos</h2>
-            <DivProjetos titulo={'Frelancer'}>
+            <DivProjetos titulo={'Frelancer'} className='overflow-visible'>
                 {lista.map(() => (
-                    <SwiperSlide className=" lg:mr-0 lg:ml-6" >
+                    <SwiperSlide className=" lg:mr-0 lg:ml-6 overflow-visible" >
                         {/* <CardProduto imagem={'https://i.imgur.com/cSytoSD.jpeg,https://i.imgur.com/WwKucXb.jpeg,https://i.imgur.com/cE2Dxh9.jpeg'}></CardProduto> */}
                         <CardAllProjetos></CardAllProjetos> 
                     </SwiperSlide>
@@ -19,7 +19,7 @@ export function Projetos() {
             </DivProjetos>            
             <DivProjetos titulo={'Frelancer'}>
                 {lista.map(() => (
-                    <SwiperSlide className=" lg:mr-0 lg:ml-6" >
+                    <SwiperSlide className=" lg:mr-0 lg:ml-6 overflow-visible" >
                         {/* <CardProduto imagem={'https://i.imgur.com/cSytoSD.jpeg,https://i.imgur.com/WwKucXb.jpeg,https://i.imgur.com/cE2Dxh9.jpeg'}></CardProduto> */}
                         <CardAllProjetos></CardAllProjetos> 
                     </SwiperSlide>

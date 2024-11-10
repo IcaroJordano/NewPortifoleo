@@ -1,14 +1,51 @@
 import { CardAllProjetos } from "./CardAllProjetos";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export function ProjetosPage() {
+    const [produtos,setProdutos]=useState([])
+    useEffect(()=>{
+        axios.post(
+            'https://graphql.datocms.com/',
+            {
+                query: `{
+                    allProjetos{
+                        titulo
+                        category
+                        linkImage
+                        linkDeploy
+                        tag1
+                        tag2
+                        tag3
+                        tag4
+                    }
+                }`
+            },
+            {
+                headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': `Icaro Jordano 8b133e7fe63b082e4161293a105f24`,
+          }
+    }
+)
+          .then((res) => {
+              setProdutos(res.data.data['allProjetos'])
+              console.log(res.data.data['allProjetos'], produtos.length)
+            // console.log(produtos)
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    },[])
     return (
-        <div className="  flex justify-center pt-28">
+        <div className={`flex justify-center pt-28 ${produtos.length>3?"h-auto":'h-screen'}`}>
             <div className=" flex mx-auto justify-around lg:justify-normal flex-wrap ">
-                <CardAllProjetos deploy={'https://icarojordano.github.io/Tailwind/'} imagem={'https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-4.5c6d0ed6.jpg&w=384&q=75'} titulo={"Portifoleo Tailwind"}></CardAllProjetos>
-                <CardAllProjetos deploy={'https://icarojordano.github.io/Conference-Schedule/'} imagem={'https://icarojordano.github.io/Conference-Schedule/assets/Infomation-BabZBlIZ.avif'} titulo={"Anuncio de Evento"}></CardAllProjetos>
-                <CardAllProjetos deploy={'https://icarojordano.github.io/React-e-commerc/'} imagem={'https://i.imgur.com/cSytoSD.jpeg,https://i.imgur.com/WwKucXb.jpeg,https://i.imgur.com/cE2Dxh9.jpeg'} titulo={"E-Shop Building React"}></CardAllProjetos>
-                <CardAllProjetos deploy={'https://icarojordano.github.io/1-Marketing-website/'} imagem={'https://icarojordano.github.io/1-Marketing-website/assets/fonebranco-DcaGvqC0.png'} titulo={'One Page Product'}></CardAllProjetos>
-                <CardAllProjetos deploy={'https://icarojordano.github.io/Portifoleo/'} imagem={'https://icarojordano.github.io/Portifoleo/assets/avatar-ChLfIcQ1.jpeg'} titulo={'My First Portfoleo'}></CardAllProjetos>
+                {produtos.map((item)=>(
+                    <CardAllProjetos deploy={item.linkDeploy} imagem={item.linkImage} titulo={item.titulo}></CardAllProjetos>
+
+                ))}
             </div>
         </div>
     )

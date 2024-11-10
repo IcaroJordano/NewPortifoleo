@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 export function CardAllProjetos({ imagem, titulo, github, deploy }) {
     return (
-        <div className="w-80 lg:w-96 h-56 lg:h-64 mb-10 lg:ml-6 ">
+        <div className="w-80 lg:w-96 h-56 lg:h-64 mb-10 lg:ml-4 ">
             <div className="h-5/6 rounded-t-md justify-center flex relative  overflow-hidden">
                 <a className="justify-center w-full flex" href={deploy} target="_blank" >
                     <img className="w-full  object-cover opacity-80 dark:opacity-100" src={imagem} alt="" />

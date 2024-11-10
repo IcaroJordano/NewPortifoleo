@@ -12,12 +12,12 @@ import 'swiper/css/scrollbar';
 export function DivProjetos({ titulo, children }) {
     const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
     return (
-        <div className="mb-10">
+        <div className=" overflow-visible mb-10">
             <h3 className="pl-4 lg:pl-20 pb-5 text-white dark:text-neutral-700 text-3xl font-normal">{titulo}</h3>
             <Swiper                
-            className='flex justify-center items-center pb-20 w-11/12 '
+            className='flex justify-center overflow-visible items-center pb-20 w-11/12 '
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={isSmallDevice ? "50" : "0"}
+                spaceBetween={isSmallDevice? "50" : "0"}
                 slidesPerView={isSmallDevice ? "1.2" : "2.7"}
                 navigation
                 pagination={{ clickable: true }}
