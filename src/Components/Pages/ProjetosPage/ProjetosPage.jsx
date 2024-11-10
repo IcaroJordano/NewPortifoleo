@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export function ProjetosPage() {
-    const [produtos,setProdutos]=useState([])
+    const [projetos,setProjetos]=useState([])
     useEffect(()=>{
         axios.post(
             'https://graphql.datocms.com/',
@@ -31,18 +31,17 @@ export function ProjetosPage() {
     }
 )
           .then((res) => {
-              setProdutos(res.data.data['allProjetos'])
-              console.log(res.data.data['allProjetos'], produtos.length)
-            // console.log(produtos)
+              setProjetos(res.data.data['allProjetos'])
+              console.log(res.data.data['allProjetos'], projetos.length)
           })
           .catch((error) => {
             console.log(error);
           });
     },[])
     return (
-        <div className={`flex justify-center pt-28 ${produtos.length>3?"h-auto":'h-screen'}`}>
+        <div className={`flex justify-center pt-28 ${projetos.length>3?"h-auto":'h-screen'}`}>
             <div className=" flex mx-auto justify-around lg:justify-normal flex-wrap ">
-                {produtos.map((item)=>(
+                {projetos.map((item)=>(
                     <CardAllProjetos deploy={item.linkDeploy} imagem={item.linkImage} titulo={item.titulo}></CardAllProjetos>
 
                 ))}
