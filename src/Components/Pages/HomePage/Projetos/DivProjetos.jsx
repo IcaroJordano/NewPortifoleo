@@ -18,7 +18,7 @@ export function DivProjetos({ titulo, children }) {
             className='flex justify-center overflow-visible items-center pb-20 w-11/12 '
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={isSmallDevice? "50" : "0"}
-                slidesPerView={isSmallDevice ? "1.2" : "2.7"}
+                slidesPerView={isSmallDevice ? "1" : "2.7"}
                 navigation
                 pagination={{ clickable: true }}
             >

@@ -26,5 +26,6 @@ export function CardAllProjetos({ imagem, titulo, github, deploy }) {
                 </div>
             </div>
         </div>
+        
     )
 }
