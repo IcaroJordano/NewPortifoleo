@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #222627;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #319685c2;
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #01b8b8;
+  }
+}
+
 div .swiper-button-next,
 div .swiper-button-prev {
   background-position: center;
@@ -19,8 +38,9 @@ div .swiper-button-prev {
   position: absolute;
   opacity: 0.8;
   /* overflow: visible; */
-  margin: 0% 1% ;
+  margin: 0% 1%;
 }
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
   scale: 0.5;
@@ -28,20 +48,22 @@ div .swiper-button-prev {
 }
 
 @media(min-width:768px) {
-  
-    div .swiper-button-next,
-    div .swiper-button-prev {
-      display: flex;
-      background-color: white;
-      width: 3vw;
-      height: 3vw;
-      color:black;
-      position: absolute;
-      top: 30%;
-    }
-  
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      scale: 0.4;
-      content: "";
-    }}
+
+  div .swiper-button-next,
+  div .swiper-button-prev {
+    display: flex;
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    color: black;
+    position: absolute;
+    top: 30%;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    scale: 0.4;
+    content: "";
+  }
+}
+
