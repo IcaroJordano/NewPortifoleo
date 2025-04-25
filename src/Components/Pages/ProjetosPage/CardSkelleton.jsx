@@ -1,7 +1,7 @@
 
 export function CardSkelleton() {
     return (
-        <div className="w-11/12 lg:w-[350px]  mb-20  rounded-xl transition-all duration-500 bg-zinc-800 dark:bg-slate-200 dark:border border-neutral-400/20">
+        <div className="w-11/12 lg:w-[380px]  mb-20  rounded-xl transition-all duration-500 bg-zinc-800 dark:bg-slate-200 dark:border border-neutral-400/20">
             <div className="w-full h-48 rounded-tl-2xl p-2">
                 <div className="object-cover h-full rounded-t-xl bg-zinc-700 " ></div> 
             </div>
