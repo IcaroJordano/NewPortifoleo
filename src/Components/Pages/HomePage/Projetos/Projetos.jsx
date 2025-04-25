@@ -54,7 +54,7 @@ export function Projetos() {
             <div className="flex flex-col items-center justify-center text-center ">
                 {isLoading && (
                     
-                    <div className="gap-5 flex flex-wrap w-11/12 ">
+                    <div className="gap-1 flex flex-wrap w-11/12 ">
                     <CardSkelleton />
                     <CardSkelleton />
                     <CardSkelleton />
@@ -62,10 +62,9 @@ export function Projetos() {
                 </div>)}
 
                 {!isLoading && (
-                    <div className="flex gap-5 w-11/12 flex-wrap justify-around">
+                    <div className="flex gap-1 w-11/12 flex-wrap justify-around">
                     {
                         projetos.map((item) => (<>
-                                <CardAllProjetos tag1={item.tag1} tag2={item.tag2} imagem={item.linkImage} titulo={item.titulo} deploy={item.linkDeploy} ></CardAllProjetos>
                                 <CardAllProjetos tag1={item.tag1} tag2={item.tag2} imagem={item.linkImage} titulo={item.titulo} deploy={item.linkDeploy} ></CardAllProjetos>
                                 </>
                         ))}
