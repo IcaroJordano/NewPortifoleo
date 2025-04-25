@@ -62,7 +62,7 @@ export function Projetos() {
                 </div>)}
 
                 {!isLoading && (
-                    <div className="flex gap-1 w-11/12 flex-wrap justify-around">
+                    <div className="flex gap-1 w-11/12 flex-wrap ">
                     {
                         projetos.map((item) => (<>
                                 <CardAllProjetos tag1={item.tag1} tag2={item.tag2} imagem={item.linkImage} titulo={item.titulo} deploy={item.linkDeploy} ></CardAllProjetos>
