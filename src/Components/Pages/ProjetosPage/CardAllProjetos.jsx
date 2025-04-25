@@ -8,7 +8,7 @@ import banner from '../../../images/banner.jpeg'
 
 export function CardAllProjetos({ imagem, titulo, github, deploy, tag1, tag2 }) {
     return (
-        <a href={deploy} target="_blank" className="w-11/12 lg:w-[300px]  mb-20  rounded-xl transition-all duration-500 bg-zinc-800 dark:bg-slate-200 dark:border border-neutral-400/20">
+        <a href={deploy} target="_blank" className="w-11/12 lg:w-[350px]  mb-20  rounded-xl transition-all duration-500 bg-zinc-800 dark:bg-slate-200 dark:border border-neutral-400/20">
             <div className="w-full h-52 rounded-tl-2xl ">
                 <img className="object-cover h-full rounded-t-xl w-full" src={imagem || null} alt="" />
             </div>
