@@ -1,31 +1,28 @@
 import { FaEye } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { FaFileAlt } from "react-icons/fa";
 
 import { FaGithub } from "react-icons/fa";
 
-export function CardAllProjetos({ imagem, titulo, github, deploy }) {
+import banner from '../../../images/banner.jpeg'
+
+export function CardAllProjetos({ imagem, titulo, github, deploy, tag1, tag2 }) {
     return (
-        <div className="w-80 lg:w-96 h-56 lg:h-64 mb-10 lg:ml-4 ">
-            <div className="h-5/6 rounded-t-md justify-center flex relative  overflow-hidden">
-                <a className="justify-center w-full flex" href={deploy} target="_blank" >
-                    <img className="w-full  object-cover opacity-80 dark:opacity-100" src={imagem} alt="" />
-                </a>
-                <h3 className="absolute text-xl text-white top-32 lg:top-40 left-5">{titulo}</h3>
+        <a href={deploy} target="_blank" className="w-11/12 lg:w-[400px]  mb-20  rounded-xl transition-all duration-500 bg-zinc-800 dark:bg-slate-200 dark:border border-neutral-400/20">
+            <div className="w-full h-52 rounded-tl-2xl ">
+                <img className="object-cover h-full rounded-t-xl w-full" src={imagem || null} alt="" />
             </div>
-            <div className="h-1/6 rounded-b-md items-center justify-around bg-neutral-200/90 flex">
-                <div className="text-xs h-full  justify-center flex items-center text-neutral-500">
-                    <span className="px-1 hover:underline" >React</span>
-                    <span className="px-1 hover:underline" >Tailwind</span>
-                    <span className="px-1 hover:underline  " >Bootstrap</span>
-                    <span className="px-1 hover:underline hidden lg:block" >Responsivo</span>
-                </div>
-                <div className="flex text-neutral-900 text-xl items-center h-full ml-14">
-                    <a target="_blank" href={github}><FaGithub className=" flex mx-1  "></FaGithub></a>
-                    <a target="_blank" href={deploy}><FiExternalLink className=" flex mx-1  "></FiExternalLink></a>
+            <div className="w-full dark:text-neutral-700 text-neutral-300 py-4 ">
+                <div className="flex items-center ps-2">
+                    <FaFileAlt />
+                    <p className="text-nowrap px-2 overflow-clip text-ellipsis w-11/12 text-start"> {titulo} </p>
 
                 </div>
+                <div className="flex text-sm pt-2 text-neutral-300 dark:text-white ps-1 ">
+                    <span className="px-3   bg-neutral-700 rounded-md  px1 mx-1">{tag1}</span>
+                    <span className="px-3   bg-neutral-700 rounded-md  px1 mx-1">{tag2}</span>
+                </div>
             </div>
-        </div>
-        
+        </a>
     )
 }
